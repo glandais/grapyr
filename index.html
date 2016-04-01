@@ -19,6 +19,9 @@
 <body>
   <div id="cesiumContainer"></div>
   <script>
+	var extent = Cesium.Rectangle.fromDegrees(-2,42,3.3,43.5);
+	Cesium.Camera.DEFAULT_VIEW_RECTANGLE = extent;
+	Cesium.Camera.DEFAULT_VIEW_FACTOR = 0;
 	Cesium.BingMapsApi.defaultKey = 'At3XUY0z6AqLn5lcjbIEASD7qF1Dy8h3ryRWkIW5lm2j6rp_k2FKiPgErhCQqolX';
     var viewer = new Cesium.Viewer('cesiumContainer', {
 		animation : false,

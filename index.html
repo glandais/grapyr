@@ -25,12 +25,28 @@
 		fullscreenButton : false,
 		geocoder : false,
 		homeButton : false,
-		timeline : false
+		timeline : false,
+		terrainProvider : new Cesium.CesiumTerrainProvider({
+			url : '//assets.agi.com/stk-terrain/world',
+			requestWaterMask : true,
+			requestVertexNormals : true
+		})
 	});
 	var options = {
 		camera : viewer.scene.camera,
 		canvas : viewer.scene.canvas
 	};
+
+	viewer.dataSources.add(Cesium.KmlDataSource.load('bikeRide.kml', options).then(function(dataSource){
+            viewer.clock.shouldAnimate = false;
+            var rider = dataSource.entities.getById('tour');
+            viewer.flyTo(rider).then(function(){
+                viewer.trackedEntity = rider;
+                viewer.selectedEntity = viewer.trackedEntity;
+                viewer.clock.multiplier = 30;
+                viewer.clock.shouldAnimate = true;
+            });
+        }));
 
   </script>
 </body>

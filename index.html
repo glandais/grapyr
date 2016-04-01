@@ -19,6 +19,7 @@
 <body>
   <div id="cesiumContainer"></div>
   <script>
+	Cesium.BingMapsApi.defaultKey = 'At3XUY0z6AqLn5lcjbIEASD7qF1Dy8h3ryRWkIW5lm2j6rp_k2FKiPgErhCQqolX';
     var viewer = new Cesium.Viewer('cesiumContainer', {
 		animation : false,
 		baseLayerPicker : false,
@@ -37,7 +38,9 @@
 		canvas : viewer.scene.canvas
 	};
 
-	viewer.dataSources.add(Cesium.KmlDataSource.load('bikeRide.kml', options).then(function(dataSource){
+	viewer.dataSources.add(Cesium.KmlDataSource.load('bikeRide.kml', options));
+	/*
+	.then(function(dataSource){
             viewer.clock.shouldAnimate = false;
             var rider = dataSource.entities.getById('tour');
             viewer.flyTo(rider).then(function(){
@@ -47,6 +50,7 @@
                 viewer.clock.shouldAnimate = true;
             });
         }));
+		*/
 
   </script>
 </body>

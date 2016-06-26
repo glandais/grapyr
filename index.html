@@ -27,16 +27,20 @@
 
 	var ignApiKey = "5y8uj6lcncf69ar1ipqi57hh";
 	var ignWmtsUrl = "https://wxs.ign.fr/" + ignApiKey + "/geoportail/wmts";
-	var ign = new Cesium.WebMapTileServiceImageryProvider({
+	var customLayers = new Array();//Cesium.createDefaultImageryProviderViewModels();
+	customLayers.push(new Cesium.ProviderViewModel({
+		name : "IGN",
+		tooltip : "IGN",
+		iconUrl : "https://wxs.ign.fr/static/logos/IGN/IGN.gif",
+		creationFunction : function() { return new Cesium.WebMapTileServiceImageryProvider({
                        url : ignWmtsUrl,
                        layer : "GEOGRAPHICALGRIDSYSTEMS.MAPS",
                        style : "normal",            // 'normal'
                        format : "image/jpeg",
                        tileMatrixSetID : "PM",
                        credit : new Cesium.Credit("IGN", "http://wxs.ign.fr/static/logos/IGN/IGN.gif", "http://www.ign.fr/")
-                   });
-	var customLayers = Cesium.createDefaultImageryProviderViewModels();
-	customLayers.push(ign);
+                   }); }
+	}));
 
     var viewer = new Cesium.Viewer('cesiumContainer', {
 		animation : false,

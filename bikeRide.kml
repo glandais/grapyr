@@ -2,28 +2,6 @@
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
 <Document>
 	<name>bikeRide.kml</name>
-	<Style id="lineStyle1">
-		<LineStyle>
-			<color>400055aa</color>
-			<width>8</width>
-		</LineStyle>
-	</Style>
-	<StyleMap id="lineStyle2">
-		<Pair>
-			<key>normal</key>
-			<styleUrl>#lineStyle1</styleUrl>
-		</Pair>
-		<Pair>
-			<key>highlight</key>
-			<styleUrl>#lineStyle</styleUrl>
-		</Pair>
-	</StyleMap>
-	<Style id="lineStyle">
-		<LineStyle>
-			<color>400055aa</color>
-			<width>8</width>
-		</LineStyle>
-	</Style>
 	<StyleMap id="lineStyle4">
 		<Pair>
 			<key>normal</key>
@@ -32,6 +10,60 @@
 		<Pair>
 			<key>highlight</key>
 			<styleUrl>#lineStyle3</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin_hl">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/campground.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+	<Style id="lineStyle1">
+		<LineStyle>
+			<color>40ff0000</color>
+			<width>8</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle">
+		<LineStyle>
+			<color>40ff0000</color>
+			<width>8</width>
+		</LineStyle>
+	</Style>
+	<Style id="s_ylw-pushpin">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/campground.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="lineStyle2">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#lineStyle1</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#lineStyle</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="lineStyle3">
@@ -725,6 +757,146 @@
 					</Placemark>
 				</Folder>
 			</Folder>
+		</Folder>
+		<Folder>
+			<name>Campings</name>
+			<open>1</open>
+			<Placemark>
+				<name>Nuit 1</name>
+				<LookAt>
+					<longitude>-1.236101246592624</longitude>
+					<latitude>43.16138393005213</latitude>
+					<altitude>0</altitude>
+					<heading>-2.497728138375159</heading>
+					<tilt>28.06412962892708</tilt>
+					<range>413.8539555760833</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-1.236562288398726,43.16136906056313,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Nuit 2</name>
+				<Camera>
+					<longitude>-0.8609348776852644</longitude>
+					<latitude>43.01622432575909</latitude>
+					<altitude>372.0776252706673</altitude>
+					<heading>92.39233869226806</heading>
+					<tilt>0.08010536302138251</tilt>
+					<roll>88.83333432200737</roll>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</Camera>
+				<styleUrl>#m_ylw-pushpin</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-0.8613451972623198,43.01656778366889,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Nuit 3</name>
+				<LookAt>
+					<longitude>-0.3816326723143759</longitude>
+					<latitude>42.969663334175</latitude>
+					<altitude>0</altitude>
+					<heading>8.664855051791893</heading>
+					<tilt>24.12671836388233</tilt>
+					<range>265.729703051657</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-0.3818190969267532,42.96967939235552,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Nuit 4</name>
+				<LookAt>
+					<longitude>0.2798504299935157</longitude>
+					<latitude>42.9428000963822</latitude>
+					<altitude>0</altitude>
+					<heading>0.4512473542990088</heading>
+					<tilt>60.00356045112631</tilt>
+					<range>401.0171775119537</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>0.2793183845370439,42.94268937491576,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Nuit 5</name>
+				<LookAt>
+					<longitude>0.6990292500710482</longitude>
+					<latitude>42.75110674307963</latitude>
+					<altitude>0</altitude>
+					<heading>0.3448408967131128</heading>
+					<tilt>51.57782565536876</tilt>
+					<range>375.7610835728059</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>0.6990545919240843,42.75140330607157,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Nuit 6</name>
+				<LookAt>
+					<longitude>1.524628010234368</longitude>
+					<latitude>42.56530023734935</latitude>
+					<altitude>0</altitude>
+					<heading>-6.399377656960375</heading>
+					<tilt>38.23731475698772</tilt>
+					<range>415.1130363470923</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>1.524261837564842,42.56594586168264,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Nuit 7</name>
+				<LookAt>
+					<longitude>1.921190349636908</longitude>
+					<latitude>42.23934120349981</latitude>
+					<altitude>0</altitude>
+					<heading>11.01718809353429</heading>
+					<tilt>35.481787154139</tilt>
+					<range>296.6103944244494</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>1.92122939878812,42.23906815602865,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Nuit 8</name>
+				<LookAt>
+					<longitude>2.360151672832487</longitude>
+					<latitude>42.53694165956167</latitude>
+					<altitude>0</altitude>
+					<heading>3.99433076366688</heading>
+					<tilt>38.08377497013989</tilt>
+					<range>514.1051352190042</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.359950992124495,42.53616194871907,0</coordinates>
+				</Point>
+			</Placemark>
 		</Folder>
 	</Folder>
 </Document>

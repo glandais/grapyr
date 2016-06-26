@@ -27,8 +27,8 @@
 
 	var ignApiKey = "5y8uj6lcncf69ar1ipqi57hh";
 	var ignWmtsUrl = "https://wxs.ign.fr/" + ignApiKey + "/geoportail/wmts";
-	var customLayers = new Array();//Cesium.createDefaultImageryProviderViewModels();
-	customLayers.push(new Cesium.ProviderViewModel({
+	var customLayers = Cesium.createDefaultImageryProviderViewModels();
+	customLayers.splice(0,0,new Cesium.ProviderViewModel({
 		name : "IGN",
 		tooltip : "IGN",
 		iconUrl : "https://wxs.ign.fr/static/logos/IGN/IGN.gif",

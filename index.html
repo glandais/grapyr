@@ -25,6 +25,7 @@
 	Cesium.Camera.DEFAULT_VIEW_FACTOR = 0;
 	Cesium.BingMapsApi.defaultKey = 'At3XUY0z6AqLn5lcjbIEASD7qF1Dy8h3ryRWkIW5lm2j6rp_k2FKiPgErhCQqolX';
 
+	/*
 	var ignApiKey = "5y8uj6lcncf69ar1ipqi57hh";
 	var ignWmtsUrl = "https://wxs.ign.fr/" + ignApiKey + "/geoportail/wmts";
 	var ign = new Cesium.WebMapTileServiceImageryProvider({
@@ -38,11 +39,12 @@
 	var customLayers = new Array();
 	customLayers.push(ign);
 	customLayers.push(new Cesium.BingMapsImageryProvider());
+	*/
 
     var viewer = new Cesium.Viewer('cesiumContainer', {
 		animation : false,
 		baseLayerPicker : true,
-		imageryProviderViewModels : customLayers,
+		imageryProviderViewModels : Cesium.createDefaultImageryProviderViewModels(),
 		fullscreenButton : false,
 		geocoder : false,
 		homeButton : false,

@@ -25,7 +25,6 @@
 	Cesium.Camera.DEFAULT_VIEW_FACTOR = 0;
 	Cesium.BingMapsApi.defaultKey = 'At3XUY0z6AqLn5lcjbIEASD7qF1Dy8h3ryRWkIW5lm2j6rp_k2FKiPgErhCQqolX';
 
-	/*
 	var ignApiKey = "5y8uj6lcncf69ar1ipqi57hh";
 	var ignWmtsUrl = "https://wxs.ign.fr/" + ignApiKey + "/geoportail/wmts";
 	var ign = new Cesium.WebMapTileServiceImageryProvider({
@@ -36,15 +35,13 @@
                        tileMatrixSetID : "PM",
                        credit : new Cesium.Credit("IGN", "http://wxs.ign.fr/static/logos/IGN/IGN.gif", "http://www.ign.fr/")
                    });
-	var customLayers = new Array();
+	var customLayers = Cesium.createDefaultImageryProviderViewModels();
 	customLayers.push(ign);
-	customLayers.push(new Cesium.BingMapsImageryProvider());
-	*/
 
     var viewer = new Cesium.Viewer('cesiumContainer', {
 		animation : false,
 		baseLayerPicker : true,
-		imageryProviderViewModels : Cesium.createDefaultImageryProviderViewModels(),
+		imageryProviderViewModels : customLayers,
 		fullscreenButton : false,
 		geocoder : false,
 		homeButton : false,

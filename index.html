@@ -27,7 +27,21 @@
 
 	var ignApiKey = "5y8uj6lcncf69ar1ipqi57hh";
 	var ignWmtsUrl = "https://wxs.ign.fr/" + ignApiKey + "/geoportail/wmts";
-	var customLayers = Cesium.createDefaultImageryProviderViewModels();
+	
+	var cycleMap = Cesium.createOpenStreetMapImageryProvider({
+		url : 'https://a.tile.opencyclemap.org/cycle/'
+	});
+
+	var customLayers = Cesium.createDefaultImageryProviderViewModels().filter(function(p) {
+		var name = p.name;
+		if (name.indexOf("Bing") > -1) {
+			return true;
+		}
+		if (name.indexOf("Mapbox") > -1) {
+			return true;
+		}
+		return false;
+	});
 	customLayers.splice(0,0,new Cesium.ProviderViewModel({
 		name : "IGN",
 		tooltip : "IGN",
@@ -35,7 +49,7 @@
 		creationFunction : function() { return new Cesium.WebMapTileServiceImageryProvider({
                        url : ignWmtsUrl,
                        layer : "GEOGRAPHICALGRIDSYSTEMS.MAPS",
-                       style : "normal",            // 'normal'
+                       style : "normal",
                        format : "image/jpeg",
                        tileMatrixSetID : "PM",
                        credit : new Cesium.Credit("IGN", "http://wxs.ign.fr/static/logos/IGN/IGN.gif", "http://www.ign.fr/")

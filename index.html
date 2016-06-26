@@ -25,7 +25,7 @@
 	Cesium.BingMapsApi.defaultKey = 'At3XUY0z6AqLn5lcjbIEASD7qF1Dy8h3ryRWkIW5lm2j6rp_k2FKiPgErhCQqolX';
     var viewer = new Cesium.Viewer('cesiumContainer', {
 		animation : false,
-		baseLayerPicker : false,
+		baseLayerPicker : true,
 		fullscreenButton : false,
 		geocoder : false,
 		homeButton : false,
@@ -54,7 +54,18 @@
             });
         }));
 		*/
-
+	var layers = viewer.scene.imageryLayers;
+	var ignApiKey = "5y8uj6lcncf69ar1ipqi57hh";
+	var ignWmtsUrl = "http://wxs.ign.fr/" + ignApiKey + "/geoportail/wmts";
+	var ign = new Cesium.WebMapTileServiceImageryProvider({
+                       url : ignWmtsUrl,
+                       layer : "GEOGRAPHICALGRIDSYSTEMS.MAPS",
+                       style : "normal",            // 'normal'
+                       format : "image/jpeg",
+                       tileMatrixSetID : "PM",
+                       credit : new Cesium.Credit("IGN", "http://wxs.ign.fr/static/logos/IGN/IGN.gif", "http://www.ign.fr/")
+                   });
+	layers.addImageryProvider(ign);
   </script>
 </body>
 </html>

@@ -2,6 +2,17 @@
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
 <Document>
 	<name>bikeRide.kml</name>
+	<Style id="sh_flag">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/flag.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
 	<StyleMap id="lineStyle4">
 		<Pair>
 			<key>normal</key>
@@ -46,6 +57,17 @@
 		<ListStyle>
 		</ListStyle>
 	</Style>
+	<Style id="sn_flag">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/flag.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
 	<StyleMap id="m_ylw-pushpin">
 		<Pair>
 			<key>normal</key>
@@ -54,6 +76,16 @@
 		<Pair>
 			<key>highlight</key>
 			<styleUrl>#s_ylw-pushpin_hl</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_flag">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_flag</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_flag</styleUrl>
 		</Pair>
 	</StyleMap>
 	<StyleMap id="lineStyle2">
@@ -759,8 +791,25 @@
 			</Folder>
 		</Folder>
 		<Folder>
-			<name>Campings</name>
+			<name>WPTS</name>
 			<open>1</open>
+			<Placemark>
+				<name>Départ</name>
+				<LookAt>
+					<longitude>-1.664298209133827</longitude>
+					<latitude>43.38358957263158</latitude>
+					<altitude>0</altitude>
+					<heading>-2.006004143910406</heading>
+					<tilt>21.62031836496877</tilt>
+					<range>349.7611802126746</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_flag</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-1.664981176305743,43.38354559798766,0</coordinates>
+				</Point>
+			</Placemark>
 			<Placemark>
 				<name>Nuit 1</name>
 				<LookAt>
@@ -895,6 +944,23 @@
 				<Point>
 					<gx:drawOrder>1</gx:drawOrder>
 					<coordinates>2.359950992124495,42.53616194871907,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Arrivée</name>
+				<LookAt>
+					<longitude>3.08490661505429</longitude>
+					<latitude>42.526546376402</latitude>
+					<altitude>16.29629461616524</altitude>
+					<heading>-70.46628101043919</heading>
+					<tilt>46.30509686963583</tilt>
+					<range>387.7257329807907</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_flag</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>3.08490661505429,42.526546376402,0</coordinates>
 				</Point>
 			</Placemark>
 		</Folder>

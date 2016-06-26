@@ -20,6 +20,11 @@
 <body>
   <div id="cesiumContainer"></div>
   <script>
+    var extent = Cesium.Rectangle.fromDegrees(-2,42,3.3,43.5);
+	Cesium.Camera.DEFAULT_VIEW_RECTANGLE = extent;
+	Cesium.Camera.DEFAULT_VIEW_FACTOR = 0;
+	Cesium.BingMapsApi.defaultKey = 'At3XUY0z6AqLn5lcjbIEASD7qF1Dy8h3ryRWkIW5lm2j6rp_k2FKiPgErhCQqolX';
+
 	var ignApiKey = "5y8uj6lcncf69ar1ipqi57hh";
 	var ignWmtsUrl = "https://wxs.ign.fr/" + ignApiKey + "/geoportail/wmts";
 	var ign = new Cesium.WebMapTileServiceImageryProvider({
@@ -32,12 +37,8 @@
                    });
 	var customLayers = new Array();
 	customLayers.push(ign);
-	customLayers.push(new BingMapsImageryProvider());
+	customLayers.push(new Cesium.BingMapsImageryProvider());
 
-    var extent = Cesium.Rectangle.fromDegrees(-2,42,3.3,43.5);
-	Cesium.Camera.DEFAULT_VIEW_RECTANGLE = extent;
-	Cesium.Camera.DEFAULT_VIEW_FACTOR = 0;
-	Cesium.BingMapsApi.defaultKey = 'At3XUY0z6AqLn5lcjbIEASD7qF1Dy8h3ryRWkIW5lm2j6rp_k2FKiPgErhCQqolX';
     var viewer = new Cesium.Viewer('cesiumContainer', {
 		animation : false,
 		baseLayerPicker : true,

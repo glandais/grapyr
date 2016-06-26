@@ -7,7 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- Make the application on mobile take up the full browser screen and disable user scaling. -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-  <title>grapyr</title>
+  <meta name="referrer" content="always">
+  <title>Traversée Pyrénées</title>
   <script src="Cesium/Cesium.js"></script>
   <style>
       @import url(Cesium/Widgets/widgets.css);
@@ -56,7 +57,7 @@
 		*/
 	var layers = viewer.scene.imageryLayers;
 	var ignApiKey = "5y8uj6lcncf69ar1ipqi57hh";
-	var ignWmtsUrl = "http://wxs.ign.fr/" + ignApiKey + "/geoportail/wmts";
+	var ignWmtsUrl = "https://wxs.ign.fr/" + ignApiKey + "/geoportail/wmts";
 	var ign = new Cesium.WebMapTileServiceImageryProvider({
                        url : ignWmtsUrl,
                        layer : "GEOGRAPHICALGRIDSYSTEMS.MAPS",

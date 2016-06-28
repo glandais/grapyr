@@ -43,6 +43,14 @@
 		return false;
 	});
 	customLayers.splice(0,0,new Cesium.ProviderViewModel({
+		name : "Michelin",
+		tooltip : "Michelin",
+		iconUrl : "michelin.jpg",
+		creationFunction : function() { return new Cesium.UrlTemplateImageryProvider({
+                       url : "https://foil.fr/magic/magicCache/{z}/{x}/{y}.png"
+                   }); }
+	}));
+	customLayers.splice(0,0,new Cesium.ProviderViewModel({
 		name : "IGN",
 		tooltip : "IGN",
 		iconUrl : "https://wxs.ign.fr/static/logos/IGN/IGN.gif",
